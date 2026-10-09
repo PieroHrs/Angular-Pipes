@@ -1,0 +1,38 @@
+<h1>Demostración de Pipes en Angular</h1>
+<hr>
+<h2>1. Pipe exponential sin exponente (exponent = 1)</h2>
+<p>{{ base }} elevado a 1 = <strong>{{ base | exponential }}</strong></p>
+<hr>
+<h2>2. Pipe exponential con exponente 2</h2>
+<p>{{ base }} elevado a 2 = <strong>{{ base | exponential:2 }}</strong></p>
+<hr>
+<h2>3. Pipe exponential con exponente 3</h2>
+<p>{{ base }} elevado a 3 = <strong>{{ base | exponential:3 }}</strong></p>
+<hr>
+<h2>4. Pipe exponential con exponente 0</h2>
+<p>{{ base }} elevado a 0 = <strong>{{ base | exponential:0 }}</strong></p>
+<hr>
+<h2>5. Pipe exponential con exponente negativo</h2>
+<p>{{ base }} elevado a -1 = <strong>{{ base | exponential:-1 }}</strong></p>
+<hr>
+<h2>6. Pipe con valor literal</h2>
+<p>3 elevado a 4 = <strong>{{ 3 | exponential:4 }}</strong></p>
+
+<hr>
+<h1>Demostración del Pipe truncate</h1>
+<h2>1. truncate con valor por defecto (limit = 25)</h2>
+<p><strong>Original:</strong> {{ textoLargo }}</p>
+<p><strong>Truncado:</strong> {{ textoLargo | truncate }}</p>
+<hr>
+<h2>2. truncate con límite personalizado (limit = 40)</h2>
+<p><strong>Truncado a 40:</strong> {{ textoLargo | truncate:40 }}</p>
+<hr>
+<h2>3. truncate respetando palabras completas</h2>
+<p><strong>Palabras completas:</strong> {{ textoLargo | truncate:40:true }}</
+p>
+<hr>
+<h2>4. truncate con puntos suspensivos personalizados</h2>
+<p><strong>Con "→":</strong> {{ textoLargo | truncate:40:true:' →' }}</p>
+<hr>
+<h2>5. Texto que no supera el límite (sin cambios)</h2>
+<p>{{ textoCorto | truncate }}</p>
